@@ -1,0 +1,126 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:400,900&subset=latin-ext';
+@import 'https://fonts.googleapis.com/css?family=Pacifico';
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #fff;
+  color: #3d3d3d;
+  font-family: 'Raleway';
+}
+
+.board {
+  margin: 50px 100px;
+  height: 70vh;
+}
+
+.jumbotron {
+	background-image: url('http://i.imgur.com/rZsSCDa.png');
+	background-size: cover;
+	height: 100vh;
+	border-radius: 0px !important;
+	background-position: 70%;
+  color: #fff;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  margin-top: 30vh;
+}
+
+.caption {
+  font-family: 'Raleway';
+  font-size: 40px;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #0658b5;
+  border-color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  border-color: #0658b5;
+  color: #0658b5;
+}
+
+.create-column {
+  background-color: #fff;
+  border-color: #0658b5;
+  color: #0658b5;
+}
+
+.create-column:hover {
+  background-color: #0658b5;
+  border-color: #0658b5;
+  color: #fff;
+}
+
+.table-title {
+  padding: 100px;
+  font-size: 40px;
+}
+
+.button-container {
+  padding-bottom: 100px;
+}
+
+.column {
+  height: 600px;
+  width: 300px;
+  background: #efefef;
+  margin-right: 2%;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-success {
+  background-color: #fff;
+  color: #0658b5;
+  border-color: #0658b5;
+}
+
+.btn-success:hover {
+  background-color: #0658b5;
+  border-color: #0658b5;
+}
+
+.btn-warning {
+  background-color: #f15156;
+  text-align: right;
+
+}
+.btn-warning:hover {
+  background-color: #f26065;
+}
+
+.new-task {
+  margin: 10px 0px 25px 0px;
+}
+
+li {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  list-style: none;
+  margin: 5px 0px 5px 0px;
+}
+
+li:hover {
+  background-color: #298dff;
+  color: #fff;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+.card-placeholder {
+	height: 50px;
+	width: 100%;
+	background: rgba(255,255,255,.4);
+	margin-bottom: 10px;
+}

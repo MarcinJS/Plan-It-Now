@@ -5,7 +5,7 @@ $(function() {
 		var i = 0;
 		for (i = 0; i < 10; i++) {
 			str += chars[Math.floor(Math.random() * chars.length)];
-		};
+		}
 		return str;
 	}
 	function Column(name) {
@@ -15,11 +15,11 @@ $(function() {
 		this.$element = createColumn();
 
 		function createColumn() {
-			var $column = $('<div>').addClass('column');
+			var $column = $('<div>').addClass('column item  col-md-3');
 			var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
 			var $columnCardList = $('<ul>').addClass('column-card-list');
-			var $columnDelete = $('<button>').addClass('btn-delete').text('X');
-			var $columnAddCard = $('<button>').addClass('add-card').text('Dodaj kartę');
+			var $columnDelete = $('<button>').addClass('btn btn-warning btn-xs pull-right').text('X');
+			var $columnAddCard = $('<button>').addClass('new-task btn btn-success pull-center').text('Nowe zadanie');
 			$columnDelete.click(function() {
 				self.removeColumn();
 			});
@@ -32,7 +32,7 @@ $(function() {
 			.append($columnCardList);
 
 			return $column;
-		};
+		}
 
 	}
 
@@ -42,6 +42,10 @@ $(function() {
 		},
 		removeColumn: function() {
 			this.$element.remove();
+			var columnId =	$('.column');
+			columnId.each(function(index){
+  					$(this).attr('class', 'col-md-3' + index);
+			});
 		}
 	};
 
@@ -54,7 +58,7 @@ $(function() {
 		function createCard() {
 			var $card = $('<li>').addClass('card');
 			var $cardDescription = $('<p>').addClass('card-description').text(self.description);
-			var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+			var $cardDelete = $('<button>').addClass('btn btn-success btn-xs pull-right').text('Done!');
 
 			$cardDelete.click(function(){
 				self.removeCard();
@@ -70,7 +74,7 @@ $(function() {
 		removeCard: function() {
 			this.$element.remove();
 		}
-	}
+	};
 	var board = {
 		name: 'Tablica kanban',
 		addColumn: function(column) {
@@ -79,7 +83,7 @@ $(function() {
 		},
 		$element: $('#board .column-container')
 
-	}
+	};
 
 	function initSortable() {
 	    $('.column-card-list').sortable({
@@ -93,7 +97,12 @@ $(function() {
  				var name = prompt('Wpisz nazwę kolumny');
  				var column = new Column(name);
  				board.addColumn(column);
- 			});
+				var columnId =	$('.column');
+				columnId.each(function(index){
+					$(this).addClass('column-'+ index);
+				});
+	});
+
 
 	var todoColumn = new Column('Do zrobienia');
 	var doingColumn = new Column('W trakcie');
@@ -110,4 +119,9 @@ $(function() {
 	todoColumn.addCard(card1);
 	doingColumn.addCard(card2);
 	doneColumn.addCard(card3);
+
+	var columnId =	$('.column');
+	columnId.each(function(index){
+  					$(this).addClass('column-'+ index);
+					});
 });
