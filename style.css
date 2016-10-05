@@ -124,3 +124,7 @@ ul {
 	background: rgba(255,255,255,.4);
 	margin-bottom: 10px;
 }
+
+.column-card-list {
+  min-height: 50px;
+}

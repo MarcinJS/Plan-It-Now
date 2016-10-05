@@ -65,7 +65,7 @@ $(function() {
 			});
 
 			$card.append($cardDelete)
-					.append($cardDescription);
+			.append($cardDescription);
 
 			return $card;
 		}
