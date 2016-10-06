@@ -44,7 +44,7 @@ $(function() {
 			this.$element.remove();
 			var columnId =	$('.column');
 			columnId.each(function(index){
-  					$(this).attr('class', 'col-md-3' + index);
+  					$(this).attr('class', 'column item col-md-3');
 			});
 		}
 	};
